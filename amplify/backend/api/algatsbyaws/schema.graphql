@@ -1,0 +1,5 @@
+type FinalCode @model {
+  id: ID!
+  name: String!
+  description: String
+}

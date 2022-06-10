@@ -1,0 +1,154 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.page_root {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+
+/* PAGE FORM */
+.page_custom{ 
+    padding: 2.5rem 0.5rem;
+}
+.page_custom h1 {
+    font-size: 2.5rem;
+    letter-spacing: 1px;
+    padding: 0.5rem;
+}
+
+.page_custom p {
+    font-size: 1rem;
+    opacity: 0.8;
+    letter-spacing: 1px;
+    padding: 0.2rem;
+}
+
+.custom_form {
+    display: flex;
+    justify-content: center;
+    gap: 2%;
+    align-items: center;
+    padding: 1rem 0.4rem;
+}
+
+.custom_form label {
+    opacity: 0.8;
+}
+
+.custom_form input {
+    width: 2.8rem;
+}
+
+@media (max-width:848px) {
+    .page_custom h1 {
+        font-size: 1.7rem;
+    }
+    
+    .page_custom p {
+        font-size: 0.8rem;
+    }
+
+    .custom_form label {
+        font-size: 0.8rem;
+    }
+}
+
+
+/*PAGE ITEMS */
+
+.page_items {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 2rem;
+    /* min-height: calc(100% - ); */
+}
+
+.page_item {
+    width: 200px;
+    height: 100px;
+    background-color: rgb(153, 148, 148);
+    margin: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*PAGE BUTTONS */
+
+.page_button {
+    display: flex;
+    gap: 1%;
+    justify-content:center;
+}
+
+.page_button_ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 5%;
+}
+
+.page_buttons {
+    display: inline-block;
+    padding: 5px 35px;
+    border: 1px solid #4f4f4f;
+    border-radius: 4px;
+    transition: all 0.2s ease-in;
+    font-size: 1rem;
+    color: rgb(0, 0, 0);
+    background: rgb(255, 252, 252);
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+.page_buttons_int {
+    display: inline-block;
+    padding: 5px 12px;
+    border: 1px solid #000000;
+    border-radius: 50%;
+    transition: all 0.2s ease-in;
+    font-size: 1rem;
+    color: rgb(0, 0, 0);
+    background: rgb(255, 255, 255);
+}
+
+@media (max-width:768px) {
+    .page_button {
+        gap: 1%;
+    }
+    
+    .page_button_ul {
+        gap: 2%;
+    }
+    
+    .page_buttons {
+        padding: 2px 8px;
+        font-size: 0.7rem;
+    }
+    
+    .page_buttons_int {
+        padding: 3px 9px;
+        font-size: 0.7rem;
+    }
+}
+
+.page_buttons:hover {
+    background: rgb(66, 66, 66);
+    color: white;
+}
+
+.page_buttons:disabled,
+.page_buttons[disabled] {
+    opacity: 0.65;
+    cursor: not-allowed;
+    background: rgb(189, 189, 189);
+    color: rgb(0, 0, 0)
+}
