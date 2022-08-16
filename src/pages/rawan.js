@@ -164,6 +164,7 @@ const App = (props) => {
       <main>
             <h1>Hello {user.username}</h1>
             <button onClick={signOut}>Sign out</button>
+            {/* <button onClick={props.awsRawan.uploadToS31}>S3</button> */}
           </main>
       <h2>Amplify Todos</h2>
       <input

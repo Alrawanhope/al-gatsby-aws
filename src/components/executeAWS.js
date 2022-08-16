@@ -1,4 +1,4 @@
-import { Amplify, Auth } from "aws-amplify";
+import { Amplify, Auth,Storage } from "aws-amplify";
 import { API, graphqlOperation } from "aws-amplify";
 import awsmobile from "../aws-exports";
 
@@ -13,6 +13,12 @@ function executeAwsSetup() {
   function configAmplify() {
     console.log("CONFIG configAmplify");
     Amplify.configure(awsmobile);
+    // Storage.configure({
+    //   AWSS3: {
+    //     bucket: "testpdfvideo", //Your bucket name;
+    //     region: "us-east-1", //Specify the region your bucket was created in;
+    //   },
+    // })
   }
 
   function configAppSync() {
@@ -28,6 +34,10 @@ function executeAwsSetup() {
     });
   }
 
+  async function uploadToS31() {
+    const result = await Storage.put("test.txt", "Hello");
+  }
+  
   function listFinalCodeViaAmplifyGQLClient() {
     return API.graphql(graphqlOperation(listFinalCodes));
   }
@@ -136,6 +146,8 @@ function executeAwsSetup() {
       signIn,
       isUserAuthenticated,
       getCurrentUser,
+
+      uploadToS31
     },
   };
 }
